@@ -32,5 +32,8 @@
   ],
   "directories": {
     "test": "tests"
+  },
+  "dependencies": {
+    "@janiscommerce/microservice-call": "^4.3.4"
   }
 }
