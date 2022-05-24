@@ -13,13 +13,14 @@ npm install @janiscommerce/conversation
 
 # Available methods
 
-The methods that you can use to create the notification:
-- **`setTopic [String]`** : This method sets which template should use the notification
-- **`setData [Object]`**: This method sets the data that eventually the template should use when sending the notification.
-- **`setEntity [String|Number]`**: This method sets the entity related to the notification.
-- **`setEntityId [String|Number]`**: This method sets the entity ID related to the notification.
-- **`setUserCreated [String]`**: This method sets the User ID related to the user that triggered the notification.
-- **`setClientCode [String]`** This method should be used to be able to make requests "on behalf" of the client, in case the session has not been injected.
+The methods that you can use to create the notification: (All these methods are chainable)
+- **`setTopic [topic: String]`** : This method sets which template should use the notification
+- **`setData [data: Object]`**: This method sets the data that eventually the template should use when sending the notification.
+- **`setEntity [entity: String|Number]`**: This method sets the entity related to the notification.
+- **`setEntityId [entityId: String|Number]`**: This method sets the entity ID related to the notification.
+- **`setUserCreated [userCreated: String]`**: This method sets the User ID related to the user that triggered the notification.
+- **`setClientCode [clientCode: String]`** This method should be used to be able to make requests "on behalf" of the client, in case the session has not been injected.
+- **`send`** This method sends the notification set using the Conversation package. Returns the ID of the created message.
 
 ## ClientCode injection
 
@@ -47,7 +48,7 @@ The codes are the following:
 #### With clientCode
 
 ```js
-const Conversation = require('@janiscommerce/conversation');
+const { Conversation } = require('@janiscommerce/conversation');
 
 const conversation = new Conversation();
 
@@ -59,7 +60,7 @@ await conversation.setTopic('example-topic')
 #### With session
 
 ```js
-const Conversation = require('@janiscommerce/conversation');
+const { Conversation } = require('@janiscommerce/conversation');
 const API = require('@janiscommerce/api');
 
 class ApiExample extends API {
@@ -86,7 +87,7 @@ module.exports = ApiExample;
 #### Basic usage
 
 ```js
-const Conversation = require('@janiscommerce/conversation');
+const { Conversation } = require('@janiscommerce/conversation');
 
 const conversation = new Conversation();
 
@@ -98,7 +99,7 @@ await conversation.setClientCode('client-code')
 #### Complete Usage
 
 ```js
-const Conversation = require('@janiscommerce/conversation');
+const { Conversation } = require('@janiscommerce/conversation');
 
 const conversation = new Conversation();
 
