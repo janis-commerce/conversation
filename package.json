@@ -34,6 +34,7 @@
     "test": "tests"
   },
   "dependencies": {
+    "@janiscommerce/lambda": "^3.7.1",
     "@janiscommerce/microservice-call": "^4.3.4"
   }
 }

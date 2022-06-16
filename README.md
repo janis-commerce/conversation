@@ -11,8 +11,9 @@ A package to send notifications using Janis Conversation Service
 npm install @janiscommerce/conversation
 ```
 
-# Available methods
+## Available methods
 
+### Configuration methods
 The methods that you can use to create the notification: (All these methods are chainable)
 - **`setTopic [topic: String]`** : This method sets which template should use the notification
 - **`setData [data: Object]`**: This method sets the data that eventually the template should use when sending the notification.
@@ -20,6 +21,8 @@ The methods that you can use to create the notification: (All these methods are 
 - **`setEntityId [entityId: String|Number]`**: This method sets the entity ID related to the notification.
 - **`setUserCreated [userCreated: String]`**: This method sets the User ID related to the user that triggered the notification.
 - **`setClientCode [clientCode: String]`** This method should be used to be able to make requests "on behalf" of the client, in case the session has not been injected.
+
+### Method of use
 - **`send`** This method sends the notification set using the Conversation package. Returns the ID of the created message.
 
 ## ClientCode injection
