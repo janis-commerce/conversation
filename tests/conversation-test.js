@@ -6,18 +6,12 @@ const sinon = require('sinon');
 
 const { Invoker } = require('@janiscommerce/lambda');
 
-const MicroserviceCall = require('@janiscommerce/microservice-call');
-
 const {
 	Conversation,
 	ConversationError
 } = require('../lib');
 
 describe('Conversation', () => {
-
-	beforeEach(() => {
-		sinon.stub(MicroserviceCall.prototype, 'call');
-	});
 
 	afterEach(() => {
 		sinon.restore();
